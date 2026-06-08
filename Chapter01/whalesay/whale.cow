@@ -1,43 +1,15 @@
-# Standard Universal Cowsay File
-# Standard Command Usage: cowsay -f ./whale.cow "Your Message Here"
-
-$red = "\e[1;31m";
-$blue = "\e[1;34m";
-$yellow = "\e[1;33m";
-$white = "\e[1;37m";
-$reset = "\e[0m";
-
-# Universal fix to grab the exact message passed to the cowsay command
-my $msg = join(' ', @ARGV) || "Docker, This is the Way!";
-my $padded_msg = sprintf("%-27s", substr($msg, 0, 27));
-
+# whale
+#
+# modified from https://www.reddit.com/r/pics/comments/25ji0n/man_face_to_face_with_whale/chi1kdy?context=3
 $the_cow = <<EOC;
-\e[H\e[J                                                     ${yellow} \\ _ /${reset}
-                                                     ${yellow}- (_) -${reset}
-                                          ${white} _   _ ${reset}    ${yellow} /   \\${reset}
-  ${white} _   _      _   _ ${reset}                     ${white}(_)(_)${reset}
-  ${white}(_)(_)    (_)(_) ${reset}
+   $thoughts
+    $thoughts
+     $thoughts
+                '-.
+      .---._     \\ \.--'
+    /       `-..__)  ,-'
+   |    0           /
+    \--.__,   .__.,`
+     `-.___'._\\_.'
 
-.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
-                             
-  ${white}$padded_msg        
-                             
-.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
-                              (     )${reset}
-                                (     )${reset}
-                                 (     )${reset}
-                                  (     )${reset}
-                                   (     )${reset}
-                                    (     )${reset}
-
-                                         ${red}[===] [===] [===] [===]${reset}
-                                         ${red}[===] [===] [===] [===] [===]${reset}
-                                       ${blue}  .---------------------------------.${reset}
-                                       ${blue} /                                   \\________${reset}
-                                    ${blue}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${reset}
-                                      ${blue}(   ${white}O${blue}                                      ~‾‾)${reset}
-                                       ${blue} \\                                          /${reset}
-                                      ${blue}    '---------------------------------------'${reset}
-                                      ${blue}~~~~~${red}<*))><${blue}~~~~~~~~~~~~${red}<*))><${blue}~~~~~~~~~${red}<*))><${blue}~~~~~${reset}
-                                        ${blue}~~~~~~~~~${red}<*))><${blue}~~~~~~~~~~~~${red}<*))><${blue}~~~~~~~~~~~~~${reset}
 EOC
