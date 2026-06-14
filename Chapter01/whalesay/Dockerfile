@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y cowsay --no-install-recommends && rm -r
 	&& mv /usr/share/cowsay/cows/default.cow /usr/share/cowsay/cows/orig-default.cow
 
 # "cowsay" installs to /usr/games
-ENV PATH $PATH:/usr/games
+ENV PATH $PATH:/usr/games:/usr/share/games
 
 COPY whale.cow /usr/share/cowsay/cows/
 RUN ln -sv /usr/share/cowsay/cows/whale.cow /usr/share/cowsay/cows/default.cow
